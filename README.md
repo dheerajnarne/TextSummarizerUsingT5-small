@@ -117,6 +117,12 @@ Results can be further improved by experimenting with:
 
 ---
 
+## Hugging Face Repository
+
+The fine-tuned model is available on Hugging Face. You can explore and use it [here](https://huggingface.co/dheerajnarne/textsummarizer).
+
+---
+
 ## Acknowledgements
 
 - **Hugging Face** for the Transformers library and datasets.
