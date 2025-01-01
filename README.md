@@ -1,7 +1,6 @@
-
 # Text Summarizer using T5 Transformer
 
-This repository contains a Jupyter Notebook for building and fine-tuning a text summarization model using the **T5 Transformer**. The project leverages **Hugging Face's Transformers library** for model handling and **Hugging Face Datasets** for training and evaluation. 
+This repository contains a Jupyter Notebook for building and fine-tuning a text summarization model using the **T5 Transformer**. The project leverages **Hugging Face's Transformers library** for model handling and **Hugging Face Datasets** for training and evaluation. Additionally, a **Streamlit Application** is provided for an interactive summarization experience.
 
 Text summarization is a key task in Natural Language Processing (NLP), and this implementation provides a scalable approach to train a summarization model tailored to custom datasets.
 
@@ -27,10 +26,10 @@ The primary goal is to fine-tune the T5 model to summarize input texts efficient
 
 ## Installation
 
-Before running the notebook, ensure you have installed the required dependencies:
+Before running the notebook or the Streamlit application, ensure you have installed the required dependencies:
 
 ```bash
-pip install -U transformers datasets tensorboard sentencepiece accelerate evaluate rouge_score
+pip install -U transformers datasets tensorboard sentencepiece accelerate evaluate rouge_score streamlit
 ```
 
 These libraries are critical for:
@@ -38,10 +37,13 @@ These libraries are critical for:
 - Accessing datasets (`datasets`).
 - Monitoring training progress (`tensorboard`).
 - Evaluating summarization performance (`evaluate`, `rouge_score`).
+- Building the Streamlit application (`streamlit`).
 
 ---
 
 ## Workflow
+
+### **Notebook Workflow**
 
 1. **Install Dependencies**: All necessary libraries are installed directly within the notebook.
 2. **Load the Pre-trained Model**:
@@ -55,6 +57,17 @@ These libraries are critical for:
 5. **Evaluation**:
     - The model's performance is measured using the ROUGE metric.
     - Generates summaries for test samples and compares them with reference outputs.
+
+### **Streamlit Application Workflow**
+
+1. **Interactive Summarization**:
+    - The Streamlit app provides a user-friendly interface to input text and generate summaries interactively.
+    - Users can paste or type text, click the "Summarize Text" button, and view the generated summary in real-time.
+2. **Dark Theme and Custom Styling**:
+    - The app is styled with a dark theme for a modern look and feel.
+    - Proper spacing is provided to display summaries clearly and concisely.
+3. **Backend**:
+    - The app uses the fine-tuned T5 model hosted on Hugging Face (`dheerajnarne/textsummarizer`) for generating summaries.
 
 ---
 
@@ -93,12 +106,25 @@ Results can be further improved by experimenting with:
 
 ## How to Run
 
+### **Notebook**
 1. Clone the repository:
    ```bash
    git clone <repository-url>
    ```
 2. Install the dependencies (see Installation section).
 3. Open the notebook in Jupyter and run the cells step-by-step.
+
+### **Streamlit Application**
+1. Clone the repository:
+   ```bash
+   git clone <repository-url>
+   ```
+2. Navigate to the folder containing the Streamlit app script (e.g., `app.py`).
+3. Run the Streamlit app:
+   ```bash
+   streamlit run app.py
+   ```
+4. Open the provided URL in your browser to interact with the application.
 
 ---
 
@@ -114,6 +140,7 @@ Results can be further improved by experimenting with:
 - Expand the dataset to include more diverse text types.
 - Experiment with larger T5 models or alternative architectures like Pegasus for summarization.
 - Integrate the model into an API or web interface for real-world usage.
+- Enhance the Streamlit app with additional features, such as language support and advanced customization options.
 
 ---
 
